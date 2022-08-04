@@ -1,17 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HouseDetails from './pages/HouseDetails';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOM.render(
+    <Router>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/house/:name" element={<HouseDetails />} />
+        </Routes>
+    </Router>,
+    document.getElementById('root')
 );
 
 reportWebVitals();
