@@ -12,7 +12,6 @@ import House from "../model/House";
 import { isNotUndefined } from "../components/utils/Undefined";
 
 const SearchResults = () => {
-
     const { name } = useParams();
 
     const [successful, setSuccessful] = React.useState(true);

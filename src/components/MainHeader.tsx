@@ -2,6 +2,7 @@ import React from 'react';
 import got_logo from '../img/got_logo.png';
 import '../App.css';
 import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 type Quote = {
     quote: string;
@@ -37,6 +38,11 @@ function getRandomQuote(): Quote {
 }
 
 const MainHeader = () => {
+    const navigate = useNavigate();
+    function goHome() {
+        navigate('/');
+    }
+
     const [quote, setQuote] = React.useState({
         quote: getRandomQuote()
     });
@@ -52,7 +58,7 @@ const MainHeader = () => {
 
     return (
         <div>
-            <img src={got_logo} className="logo" alt="logo" />
+            <img src={got_logo} className={"logo hoverClass"} alt="logo" onClick={goHome}/>
             <Typography variant="h4" component="h3">
                 <b><i>"{ quote.quote.quote }"</i></b> - { quote.quote.orator }
             </Typography>

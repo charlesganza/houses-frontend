@@ -7,8 +7,6 @@ import { useNavigate } from "react-router-dom";
 import MainHeader from "./components/MainHeader";
 
 function App() {
-    document.title = "Winter is Coming";
-
     const navigate = useNavigate();
     const goToSearchPage = () => navigate('/search/' + searchQuery['query']);
 
