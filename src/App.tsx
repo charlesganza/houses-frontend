@@ -62,7 +62,7 @@ function App() {
                                name="query"
                                onChange={handleTextFieldChange}
                                helperText={searchFieldError.hasError ? 'At least 3 characters required!' : ''}
-                               inputProps={{ maxLength: 25 }}
+                               inputProps={{ maxLength: 50 }}
                                error={searchFieldError.hasError}
                                onKeyDown={(e: React.KeyboardEvent) => {
                                    onEnterKeyPressed(e, search);
@@ -71,7 +71,7 @@ function App() {
                                InputProps={{
                                    style: {
                                        color: '#ffffff',
-                                       fontSize: 35,
+                                       fontSize: 28,
                                        backgroundColor: '#737681',
                                        width: 450,
                                        height: 70
