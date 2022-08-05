@@ -39,9 +39,7 @@ function getRandomQuote(): Quote {
 
 const MainHeader = () => {
     const navigate = useNavigate();
-    function goHome() {
-        navigate('/');
-    }
+    const goHome = () => navigate('/');
 
     const [quote, setQuote] = React.useState({
         quote: getRandomQuote()
